@@ -69,3 +69,48 @@
       		}            
    		}
 	}
+## Search operation algorithm
+	If root.data is equal to search.data
+   		return root
+	else
+   		while data not found
+
+      			If data is greater than node.data
+         			goto right subtree
+      			else
+         			goto left subtree
+         
+      			If data found
+         			return node
+   		endwhile 
+   
+   		return data not found
+   
+	end if
+	
+## Search Operation implementation
+	struct node* search(int data) {
+   		struct node *current = root;
+   		printf("Visiting elements: ");
+
+   		while(current->data != data) {
+      			if(current != NULL)
+      				printf("%d ",current->data); 
+      
+      			//go to left tree
+
+      			if(current->data > data) {
+         			current = current->leftChild;
+      				}
+      			//else go to right tree
+     			else {                
+         			current = current->rightChild;
+      				}
+
+      			//not found
+      			if(current == NULL) {
+         			return NULL;
+      				}
+  		}
+   		return current;
+	}
