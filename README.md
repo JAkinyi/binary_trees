@@ -114,3 +114,7 @@
   		}
    		return current;
 	}
+## Traversal Methods:
+	Post order
+	Pre order
+	In order
